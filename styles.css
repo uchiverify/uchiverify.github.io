@@ -1,0 +1,1498 @@
+/* Color Scheme */
+:root {
+    --maroon-primary: #800000;
+    --maroon-dark: #5c0000;
+    --maroon-light: #a51c30;
+    --bg-dark: #1a1a1a;
+    --bg-light: #f5f5f5;
+    --text-dark: #333333;
+    --text-light: #ffffff;
+    --border-color: #e0e0e0;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--maroon-dark) 0%, var(--maroon-primary) 50%, var(--maroon-light) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 800px;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 2rem;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.tagline {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 3rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--text-light);
+    color: var(--maroon-primary);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    background-color: #f0f0f0;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-light);
+    border: 2px solid var(--text-light);
+}
+
+.btn-secondary:hover {
+    background-color: var(--text-light);
+    color: var(--maroon-primary);
+    transform: translateY(-2px);
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.scroll-indicator span {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.arrow-down {
+    width: 30px;
+    height: 30px;
+    border-left: 2px solid rgba(255, 255, 255, 0.7);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.7);
+    transform: rotate(-45deg);
+}
+
+/* Demo Animation Section */
+.demo-section {
+    min-height: 100vh;
+    background-color: white;
+    padding: 4rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.demo-container {
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.demo-container h2 {
+    font-size: 2.5rem;
+    color: var(--maroon-primary);
+    margin-bottom: 1rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+.demo-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 3rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.demo-animation {
+    position: relative;
+    background-color: #36393f;
+    border-radius: 12px;
+    padding: 3rem;
+    margin: 0 auto 2rem;
+    width: 600px;
+    max-width: 90%;
+    height: 600px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* Discord Embed Mockup */
+.discord-embed {
+    background-color: #2f3136;
+    border-left: 4px solid var(--maroon-primary);
+    border-radius: 4px;
+    padding: 1rem;
+    max-width: 500px;
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.embed-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.bot-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.bot-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.bot-name {
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.bot-badge {
+    background-color: #5865f2;
+    color: white;
+    padding: 0.1rem 0.4rem;
+    border-radius: 3px;
+    font-size: 0.65rem;
+    font-weight: 600;
+}
+
+.timestamp {
+    color: #b9bbbe;
+    font-size: 0.75rem;
+}
+
+.embed-content {
+    padding-left: 0.5rem;
+    text-align: left;
+}
+
+.embed-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0.75rem;
+}
+
+.embed-icon img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.embed-title {
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.embed-heading {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.embed-text {
+    color: #dcddde;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.embed-buttons {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.verify-btn {
+    background-color: #5865f2;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.verify-btn:hover {
+    background-color: #4752c4;
+}
+
+.privacy-btn {
+    background-color: transparent;
+    color: #b9bbbe;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.privacy-btn:hover {
+    background-color: #3a3d44;
+}
+
+/* Mouse Cursor */
+.mouse-cursor {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    pointer-events: none;
+    z-index: 10;
+    opacity: 0;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+/* UChicago Sign-In Page */
+.uchicago-signin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 95%;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 2;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+}
+
+.signin-header {
+    background-color: white;
+    padding: 2rem 2rem 1.5rem;
+    border-bottom: 1px solid #e0e0e0;
+    border-radius: 8px 8px 0 0;
+}
+
+.uchicago-logo-img {
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.signin-content {
+    padding: 2rem;
+}
+
+.signin-title {
+    color: #555;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.signin-label {
+    display: block;
+    color: #333;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.signin-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    background-color: white;
+}
+
+.signin-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.signin-checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.signin-checkbox label {
+    color: #666;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.signin-btn {
+    width: 100%;
+    background-color: var(--maroon-primary);
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-bottom: 1rem;
+}
+
+.signin-btn:hover {
+    background-color: var(--maroon-dark);
+}
+
+.signin-help {
+    color: #666;
+    text-decoration: underline;
+    font-size: 0.95rem;
+}
+
+.signin-help:hover {
+    color: #333;
+}
+
+/* Confetti */
+.confetti-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    opacity: 0;
+}
+
+/* Discord Profile */
+.discord-profile {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1e1f22;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 95%;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 2;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    overflow-y: auto;
+}
+
+.profile-banner-green {
+    height: 120px;
+    background: linear-gradient(135deg, #5fb57d, #7dd69a);
+    border-radius: 0;
+    position: relative;
+}
+
+.profile-content {
+    padding: 1rem;
+    padding-top: 4rem;
+    position: relative;
+    background-color: #1e1f22;
+}
+
+.profile-avatar-large {
+    position: absolute;
+    top: -60px;
+    left: 1rem;
+}
+
+.avatar-circle-large {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #1e1f22;
+    border: 8px solid #1e1f22;
+    position: relative;
+    overflow: hidden;
+}
+
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ff69b4, #ffa500, #4169e1);
+    border-radius: 50%;
+}
+
+.status-indicator {
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+    width: 22px;
+    height: 22px;
+    background-color: #43b581;
+    border-radius: 50%;
+    border: 5px solid #1e1f22;
+}
+
+.profile-info {
+    color: white;
+    text-align: left;
+}
+
+.profile-username {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: #f2f3f5;
+    text-align: left;
+}
+
+.profile-handle {
+    font-size: 0.95rem;
+    color: #b5bac1;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.profile-divider {
+    height: 1px;
+    background-color: #3f4147;
+    margin: 1rem 0;
+}
+
+.profile-mutual {
+    margin-bottom: 1rem;
+}
+
+.mutual-text {
+    color: #b5bac1;
+    font-size: 0.85rem;
+}
+
+.profile-roles {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.role-badge-verified {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #2b2d31;
+    border: 1px solid #3f4147;
+    color: #f2f3f5;
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.role-dot-pink {
+    width: 12px;
+    height: 12px;
+    background-color: #ed4c67;
+    border-radius: 50%;
+}
+
+.role-add-btn {
+    width: 32px;
+    height: 32px;
+    background-color: #2b2d31;
+    border: 1px solid #3f4147;
+    color: #b5bac1;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.role-add-btn:hover {
+    background-color: #35373c;
+}
+
+.profile-message {
+    margin-top: 1rem;
+}
+
+.message-input {
+    width: 100%;
+    background-color: #383a40;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    color: #dbdee1;
+    font-size: 0.95rem;
+}
+
+.message-input::placeholder {
+    color: #6d6f78;
+}
+
+/* Replay Button */
+.replay-btn {
+    background-color: var(--maroon-primary);
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+    z-index: 10;
+}
+
+.replay-btn:hover {
+    background-color: var(--maroon-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(128, 0, 0, 0.3);
+}
+
+.replay-btn span {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+/* Commands Showcase Section */
+.commands-section {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--bg-light) 0%, #e8e8e8 100%);
+    padding: 4rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.commands-container {
+    max-width: 900px;
+    text-align: center;
+    width: 100%;
+}
+
+.commands-container h2 {
+    font-size: 2.5rem;
+    color: var(--maroon-primary);
+    margin-bottom: 1rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+.commands-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 3rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.commands-animation {
+    position: relative;
+    background-color: #36393f;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 0 auto;
+    width: 700px;
+    max-width: 90%;
+    height: 500px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* Commands Navigation Buttons */
+.commands-nav {
+    position: absolute;
+    bottom: 1rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    color: var(--maroon-primary);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.commands-nav:hover {
+    background-color: white;
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.commands-nav.prev {
+    left: 1rem;
+}
+
+.commands-nav.next {
+    right: 1rem;
+}
+
+.commands-chat {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.commands-messages {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+
+.command-message {
+    display: flex;
+    gap: 1rem;
+    opacity: 0;
+    animation: fadeInMessage 0.5s ease forwards;
+    text-align: left;
+}
+
+@keyframes fadeInMessage {
+    to {
+        opacity: 1;
+    }
+}
+
+.command-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.user-command-avatar {
+    background: linear-gradient(135deg, #ff69b4, #ffa500, #4169e1);
+}
+
+.bot-command-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.bot-command-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.command-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.command-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.command-author {
+    color: #f2f3f5;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.command-bot-badge {
+    background-color: #5865f2;
+    color: white;
+    padding: 0.1rem 0.4rem;
+    border-radius: 3px;
+    font-size: 0.65rem;
+    font-weight: 600;
+}
+
+.command-timestamp {
+    color: #949ba4;
+    font-size: 0.75rem;
+    text-align: left;
+}
+
+.command-text {
+    color: #dcddde;
+    font-size: 1rem;
+    line-height: 1.4;
+    word-wrap: break-word;
+    text-align: left;
+}
+
+.command-embed {
+    background-color: #2f3136;
+    border-left: 4px solid var(--maroon-primary);
+    border-radius: 4px;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    text-align: left;
+}
+
+.embed-title {
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.embed-description {
+    color: #dcddde;
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.embed-field {
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.embed-field-name {
+    color: #b9bbbe;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    text-align: left;
+}
+
+.embed-field-value {
+    color: #dcddde;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+.embed-image {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 4px;
+    margin-top: 0.75rem;
+    display: block;
+}
+
+/* Documentation Section */
+.docs-section {
+    min-height: 100vh;
+    background-color: var(--bg-light);
+    padding: 4rem 2rem;
+}
+
+.docs-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.tab-btn {
+    background-color: transparent;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #666;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+    position: relative;
+    bottom: -2px;
+}
+
+.tab-btn:hover {
+    color: var(--maroon-primary);
+}
+
+.tab-btn.active {
+    color: var(--maroon-primary);
+    border-bottom-color: var(--maroon-primary);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.docs-layout {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 2rem;
+    min-height: 70vh;
+}
+
+/* Sidebar Styles (for both commands and FAQ) */
+.docs-sidebar {
+    background-color: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px var(--shadow);
+    height: fit-content;
+    position: sticky;
+    top: 2rem;
+}
+
+.docs-nav ul {
+    list-style: none;
+}
+
+.docs-nav li {
+    margin-bottom: 0.5rem;
+}
+
+.docs-nav a {
+    display: block;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    color: var(--text-dark);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.docs-nav a:hover {
+    background-color: rgba(128, 0, 0, 0.1);
+    color: var(--maroon-primary);
+    transform: translateX(5px);
+}
+
+.docs-nav a.active {
+    background-color: var(--maroon-primary);
+    color: var(--text-light);
+}
+
+.docs-nav li.hidden {
+    display: none;
+}
+
+/* Content Area */
+.docs-content {
+    background-color: white;
+    border-radius: 12px;
+    padding: 3rem;
+    box-shadow: 0 2px 10px var(--shadow);
+    min-height: 500px;
+}
+
+/* Search Input */
+.search-container {
+    margin-bottom: 1.5rem;
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--maroon-primary);
+}
+
+.welcome-message {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: #666;
+}
+
+.welcome-message h2 {
+    color: var(--maroon-primary);
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+/* Article Content Styling */
+#faq-article h2,
+#command-article h2 {
+    color: var(--maroon-primary);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 3px solid var(--maroon-primary);
+}
+
+#faq-article h3,
+#command-article h3 {
+    color: var(--maroon-dark);
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+#faq-article h4,
+#command-article h4 {
+    color: var(--maroon-primary);
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+#faq-article p,
+#command-article p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+#faq-article ul,
+#faq-article ol,
+#command-article ul,
+#command-article ol {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+#faq-article li,
+#command-article li {
+    margin-bottom: 0.5rem;
+}
+
+#faq-article code,
+#command-article code {
+    background-color: #f5f5f5;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    color: var(--maroon-primary);
+}
+
+#faq-article a,
+#command-article a {
+    color: var(--maroon-primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#faq-article a:hover,
+#command-article a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.footer-text {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+}
+
+.btn-footer {
+    background-color: var(--maroon-primary);
+    color: var(--text-light);
+    border: 2px solid var(--maroon-primary);
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+}
+
+.btn-footer:hover {
+    background-color: var(--maroon-light);
+    border-color: var(--maroon-light);
+    transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .docs-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .docs-sidebar {
+        position: static;
+    }
+
+    .demo-animation {
+        padding: 2rem;
+    }
+
+    .tabs {
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .tagline {
+        font-size: 1.2rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .docs-content {
+        padding: 1.5rem;
+    }
+
+    .logo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .demo-container {
+        padding: 0 0.75rem;
+    }
+
+    .demo-container h2 {
+        font-size: 1.85rem;
+        line-height: 1.2;
+    }
+
+    .demo-subtitle {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .commands-container h2 {
+        font-size: 1.85rem;
+        line-height: 1.2;
+    }
+
+    .commands-subtitle {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .demo-animation {
+        padding: 1.5rem;
+        height: 500px;
+    }
+
+    .discord-embed {
+        padding: 0.75rem;
+        max-width: 85%;
+    }
+
+    .uchicago-signin {
+        max-width: 85%;
+    }
+
+    .discord-profile {
+        max-width: 85%;
+    }
+
+    .embed-title {
+        font-size: 0.95rem;
+    }
+
+    .embed-text {
+        font-size: 0.9rem;
+    }
+
+    .verify-btn {
+        padding: 0.4rem 0.85rem;
+        font-size: 0.9rem;
+    }
+
+    .signin-title {
+        font-size: 1.75rem;
+    }
+
+    .signin-label {
+        font-size: 1rem;
+    }
+
+    .signin-input {
+        padding: 0.65rem 0.85rem;
+        font-size: 0.95rem;
+    }
+
+    .signin-btn {
+        padding: 0.85rem;
+        font-size: 1.1rem;
+    }
+
+    .tab-btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .commands-animation {
+        padding: 1.5rem;
+        height: 450px;
+    }
+
+    .command-embed {
+        padding: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+
+    .docs-section {
+        padding: 2rem 1rem;
+    }
+
+    .demo-section {
+        padding: 2rem 1rem;
+    }
+
+    .demo-container {
+        padding: 0 0.5rem;
+    }
+
+    .demo-container h2 {
+        font-size: 1.5rem;
+        line-height: 1.2;
+    }
+
+    .demo-subtitle {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    .commands-container h2 {
+        font-size: 1.5rem;
+        line-height: 1.2;
+    }
+
+    .commands-subtitle {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    .demo-animation {
+        padding: 1rem;
+        height: 450px;
+    }
+
+    .discord-embed {
+        padding: 0.65rem;
+        max-width: 90%;
+    }
+
+    .uchicago-signin {
+        max-width: 90%;
+        padding: 0;
+    }
+
+    .signin-header {
+        padding: 1.5rem 1.5rem 1rem;
+    }
+
+    .signin-content {
+        padding: 1.5rem;
+    }
+
+    .discord-profile {
+        max-width: 90%;
+    }
+
+    .profile-banner-green {
+        height: 80px;
+    }
+
+    .profile-content {
+        padding: 0.75rem;
+        padding-top: 3rem;
+    }
+
+    .profile-avatar-large {
+        top: -40px;
+        left: 0.75rem;
+    }
+
+    .avatar-circle-large {
+        width: 70px;
+        height: 70px;
+        border: 6px solid #1e1f22;
+    }
+
+    .status-indicator {
+        bottom: 4px;
+        right: 4px;
+        width: 16px;
+        height: 16px;
+        border: 4px solid #1e1f22;
+    }
+
+    .profile-username {
+        font-size: 1.2rem;
+    }
+
+    .profile-handle {
+        font-size: 0.8rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .profile-divider {
+        margin: 0.75rem 0;
+    }
+
+    .profile-mutual {
+        margin-bottom: 0.75rem;
+    }
+
+    .mutual-text {
+        font-size: 0.75rem;
+    }
+
+    .profile-roles {
+        margin-bottom: 1rem;
+    }
+
+    .role-badge-verified {
+        font-size: 0.8rem;
+        padding: 0.25rem 0.6rem;
+    }
+
+    .role-dot-pink {
+        width: 10px;
+        height: 10px;
+    }
+
+    .role-add-btn {
+        width: 28px;
+        height: 28px;
+        font-size: 1rem;
+    }
+
+    .message-input {
+        padding: 0.6rem 0.85rem;
+        font-size: 0.85rem;
+    }
+
+    .embed-heading {
+        font-size: 1rem;
+    }
+
+    .embed-title {
+        font-size: 0.9rem;
+    }
+
+    .embed-text {
+        font-size: 0.85rem;
+    }
+
+    .verify-btn {
+        padding: 0.4rem 0.75rem;
+        font-size: 0.85rem;
+    }
+
+    .privacy-btn {
+        padding: 0.4rem 0.75rem;
+        font-size: 0.85rem;
+    }
+
+    .signin-title {
+        font-size: 1.5rem;
+    }
+
+    .signin-label {
+        font-size: 0.95rem;
+    }
+
+    .signin-input {
+        padding: 0.6rem 0.75rem;
+        font-size: 0.9rem;
+    }
+
+    .signin-btn {
+        padding: 0.75rem;
+        font-size: 1rem;
+    }
+
+    .tab-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .commands-section {
+        padding: 2rem 1rem;
+    }
+
+    .commands-animation {
+        padding: 1rem;
+        height: 400px;
+    }
+
+    .command-header {
+        font-size: 0.9rem;
+    }
+
+    .command-text {
+        font-size: 0.95rem;
+    }
+
+    .footer {
+        padding: 2rem 1rem;
+    }
+
+    .footer-text {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .btn-footer {
+        width: 100%;
+        max-width: 250px;
+    }
+}

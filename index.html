@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UChiVerify - Discord Bot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <img src="assets/logo.png" alt="UChiVerify Logo" class="logo">
+            <h1>UChiVerify</h1>
+            <p class="tagline">Verify UChicago students on your Discord server</p>
+            <div class="cta-buttons">
+                <a href="https://discord.com/oauth2/authorize?client_id=1347436993503559691"
+                   class="btn btn-primary"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Add to Discord
+                </a>
+                <a href="https://discord.gg/syNk2wNp2x"
+                   class="btn btn-secondary"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Support Server
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="arrow-down"></div>
+        </div>
+    </section>
+
+    <!-- Demo Animation Section -->
+    <section class="demo-section">
+        <div class="demo-container">
+            <h2>Verifying maroons shouldn't be hard</h2>
+            <p class="demo-subtitle">UChiVerify is the only solution integrated directly with UChicago's sign-in portal, so only UChicago affiliates can get into your server.</p>
+
+            <div class="demo-animation">
+                <!-- Discord Embed Mockup -->
+                <div class="discord-embed">
+                    <div class="embed-header">
+                        <img src="assets/logo.png" alt="Bot Avatar" class="bot-avatar">
+                        <div class="bot-info">
+                            <span class="bot-name">UChiVerify</span>
+                            <span class="bot-badge">APP</span>
+                            <span class="timestamp">3/24/25, 12:04 PM</span>
+                        </div>
+                    </div>
+                    <div class="embed-content">
+                        <p class="embed-heading">Verify your UChicago Affiliation</p>
+                        <p class="embed-text">Click the button below to verify your UChicago affiliation and get access.</p>
+                        <div class="embed-buttons">
+                            <button class="verify-btn" id="demo-verify-btn">Verify Now</button>
+                            <button class="privacy-btn">Privacy Policy ↗</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mouse Cursor -->
+                <div class="mouse-cursor" id="demo-cursor">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="black" stroke-width="1">
+                        <path d="M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z"/>
+                    </svg>
+                </div>
+
+                <!-- UChicago Sign-In Page -->
+                <div class="uchicago-signin" id="uchicago-signin">
+                    <div class="signin-header">
+                        <img src="assets/uchicago_logo.png" alt="University of Chicago" class="uchicago-logo-img">
+                    </div>
+                    <div class="signin-content">
+                        <h2 class="signin-title">Sign In</h2>
+                        <label class="signin-label">CNetID</label>
+                        <input type="text" class="signin-input" id="cnetid-input" placeholder="">
+                        <div class="signin-checkbox">
+                            <input type="checkbox" id="keep-signed-in">
+                            <label for="keep-signed-in">Keep me signed in</label>
+                        </div>
+                        <button class="signin-btn" id="demo-signin-btn">Next</button>
+                        <a href="#" class="signin-help">Help</a>
+                    </div>
+                </div>
+
+                <!-- Confetti Container -->
+                <div class="confetti-container" id="confetti-container"></div>
+
+                <!-- Discord Profile After Verification -->
+                <div class="discord-profile" id="discord-profile">
+                    <div class="profile-banner-green"></div>
+                    <div class="profile-content">
+                        <div class="profile-avatar-large">
+                            <div class="avatar-circle-large">
+                                <div class="avatar-img"></div>
+                            </div>
+                            <div class="status-indicator"></div>
+                        </div>
+                        <div class="profile-info">
+                            <h3 class="profile-username">Phil the Phoenix</h3>
+                            <p class="profile-handle">phil_pilled#1890</p>
+                            <div class="profile-divider"></div>
+                            <div class="profile-roles">
+                                <div class="role-badge-verified">
+                                    <span class="role-dot-pink"></span>
+                                    UChicago Verified
+                                </div>
+                                <button class="role-add-btn">+</button>
+                            </div>
+                            <div class="profile-message">
+                                <input type="text" placeholder="Message @Phil the Phoenix" class="message-input">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="replay-btn" id="replay-btn">
+                <span>↻</span> Replay
+            </button>
+        </div>
+    </section>
+
+    <!-- Commands Showcase Section -->
+    <section class="commands-section">
+        <div class="commands-container">
+            <h2>Promoting UChicago culture shouldn't be either</h2>
+            <p class="commands-subtitle">Fun commands that only UChicago students can truly understand</p>
+
+            <div class="commands-animation">
+                <div class="commands-chat">
+                    <!-- Messages will be dynamically added here -->
+                    <div class="commands-messages" id="commands-messages"></div>
+                </div>
+
+                <!-- Commands Navigation -->
+                <button class="commands-nav prev" id="commands-prev">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                <button class="commands-nav next" id="commands-next">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documentation Section with Tabs -->
+    <section class="docs-section">
+        <div class="docs-container">
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="commands">Commands</button>
+                <button class="tab-btn" data-tab="faq">FAQ</button>
+            </div>
+
+            <!-- Commands Tab -->
+            <div class="tab-content active" id="commands-tab">
+                <div class="docs-layout">
+                    <aside class="docs-sidebar">
+                        <div class="search-container">
+                            <input
+                                type="text"
+                                id="commands-search"
+                                placeholder="Search commands..."
+                                class="search-input"
+                            >
+                        </div>
+                        <nav class="docs-nav">
+                            <ul id="commands-list"></ul>
+                        </nav>
+                    </aside>
+                    <main class="docs-content">
+                        <div id="command-article">
+                            <div class="welcome-message">
+                                <h2>Bot Commands</h2>
+                                <p>Select a command from the left to see detailed documentation.</p>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+            </div>
+
+            <!-- FAQ Tab -->
+            <div class="tab-content" id="faq-tab">
+                <div class="docs-layout">
+                    <aside class="docs-sidebar">
+                        <div class="search-container">
+                            <input
+                                type="text"
+                                id="faq-search"
+                                placeholder="Search articles..."
+                                class="search-input"
+                            >
+                        </div>
+                        <nav class="docs-nav">
+                            <ul id="faq-list"></ul>
+                        </nav>
+                    </aside>
+                    <main class="docs-content">
+                        <div id="faq-article">
+                            <div class="welcome-message">
+                                <h2>FAQ</h2>
+                                <p>Select an article from the left to get started, or use the search box to find what you need.</p>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-text">Created by UChicago Transit Enthusiasts & Explorers RSO, shared with the UChicago Community.</p>
+            <a href="https://status.dariel.us/" class="btn btn-footer" target="_blank" rel="noopener noreferrer">
+                Status
+            </a>
+        </div>
+    </footer>
+
+    <script src="commands-data.js"></script>
+    <script src="faq-data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
