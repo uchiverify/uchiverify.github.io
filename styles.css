@@ -1099,6 +1099,32 @@ body {
     margin: 0;
 }
 
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-link {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: var(--text-light);
+    text-decoration: underline;
+}
+
+.footer-divider {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 1rem;
+    user-select: none;
+}
+
 .btn-footer {
     background-color: var(--maroon-primary);
     color: var(--text-light);
