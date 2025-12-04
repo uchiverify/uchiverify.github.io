@@ -95,6 +95,41 @@ const faqArticles = [
 
             <p>Once added, use the <code>/setchannel</code> command in your desired verification channel to get started!</p>
         `
+    },
+    {
+        id: 'data-storage',
+        title: 'Does UChiVerify store my information?',
+        content: `
+            <h2>Does UChiVerify store my information?</h2>
+            <p>This question comes up a lot so I figure I show the capabilities of the bot, what the bot does, and what the bot actually stores.</p>
+
+            <h3>Information the bot has the capability of accessing:</h3>
+            <pre><code>{'sub': 'random_hash_here',
+'name': 'Phil Bird Phoenix',
+'locale': 'en_US',
+'email': 'phoenix@uchicago.edu',
+'nickname': 'Phil',
+'preferred_username': 'phoenix@uchicago.edu',
+'given_name': 'Phil',
+'middle_name': 'Bird',
+'family_name': 'Phoenix',
+'zoneinfo': 'America/Chicago',
+'updated_at': 1742582820,
+'email_verified': True
+}</code></pre>
+
+            <h3>Information the bot actually accesses to verify your status:</h3>
+            <pre><code>{'sub': 'random_hash_here',
+'email': 'phoenix@uchicago.edu',
+'email_verified': True
+}</code></pre>
+
+            <h3>Information the bot stores permanently:</h3>
+            <pre><code>{}</code></pre>
+
+            <p>UChiVerify may temporarily store the data it uses to verify your status in logs, which persist only as long as UChiVerify is online. The bot restarts for updates every few hours or so. This temporary buffer is for troubleshooting issues if you ever run into problems using UChiVerify.</p>
+
+        `
     }
 ];
 
